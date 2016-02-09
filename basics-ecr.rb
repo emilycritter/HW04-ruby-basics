@@ -35,7 +35,7 @@ array_of_bodies.push hsh.keys == [:name, :age]
 array_of_bodies.push hsh.values == ['Fido', '99']
 array_of_bodies.push hsh.merge({special: 'Dog'}) == { name: 'Fido', age: '99', special: 'Dog' }
 
-puts array_of_bodies.count
+# puts array_of_bodies.count
 
 array_of_bodies.each_with_index do |body, i|
   if i < 13

@@ -1,74 +1,49 @@
-print "1. "
-puts 5 == 2 * 2
+def question(prompt, body)
+  print prompt
+  puts body
+end
 
-print "2. "
-puts 3 > 4
+array_of_bodies = []
 
-print "3. "
-puts (3 * 2) > 10
+array_of_bodies.push 4 == 2 * 2
+array_of_bodies.push 5 > 4
+array_of_bodies.push (6 * 2) > 10
+array_of_bodies.push 3 == 3
+array_of_bodies.push (1 > 0) && (1 <= 1) == true
+array_of_bodies.push 1 != 2
+array_of_bodies.push (10 <= 10) || (2 >= 3) == true
+array_of_bodies.push 12 % 3 == 0
+array_of_bodies.push 100 == 10 ** 2
+array_of_bodies.push 100/15 == 1000 / (300 / 2)
 
-print "4. "
-puts 2 == 3
-
-print "5. "
-puts (1 > 0) && (2 <= 1) == true
-
-print "6. "
-puts 2 != 2
-
-print "7. "
-puts (14 <= 10) || (2 >= 3) == true
-
-print "8. "
-puts 10 % 3 == 0
-
-print "9. "
-puts 12 == 10 ** 2
-
-print "10. "
-puts 1.6 == 1000 / (300 / 2)
-
-#I AM A COMMENT RUBY IGNORES ME BECAUSE MY LINE STARTED WITH A '#'
-#Use the following variable msg for questions 11 - 15
 msg = "hEllO"
-
-print "11. "
-puts msg == "HELLO"
-
-print "12. "
-puts msg == "HeLLo"
-
-print "13. "
-puts msg == "OllEh"
-
-print "13a. "
-puts msg == "OLLEH"
+array_of_bodies.push msg.upcase == "HELLO"
+array_of_bodies.push msg.swapcase == "HeLLo"
+array_of_bodies.push msg.reverse == "OllEh"
+array_of_bodies.push msg.reverse.upcase == "OLLEH"
 
 arr = ['a', 'b', 'c']
-
-print "14. "
-puts arr == 'c'
-
-print "15. "
-puts 5 == arr.count
-
-print "16. "
-puts arr == 'a,b,c'
-
+array_of_bodies.push arr.last == 'c'
+array_of_bodies.push 3 == arr.count
+array_of_bodies.push arr.join(',') == 'a,b,c'
 #Hint: This will take 2 method calls
-print "17. "
-puts arr == 'C'
+array_of_bodies.push arr.last.upcase == 'C'
 
 hsh = { name: 'Fido', age: '99' }
-print "18. "
-puts  hsh == 'Fido'
+array_of_bodies.push  hsh[:name] == 'Fido'
+array_of_bodies.push hsh.keys == [:name, :age]
+array_of_bodies.push hsh.values == ['Fido', '99']
+array_of_bodies.push hsh.merge({special: 'Dog'}) == { name: 'Fido', age: '99', special: 'Dog' }
 
-print "19. "
-puts hsh == [:name, :age]
-
-print "20. "
-puts hsh == ['Fido', '99']
-
-
-print "21. "
-puts hsh == { name: 'Fido', age: '99', special: 'Dog' }
+array_of_bodies.each_with_index do |body, i|
+  if i < 13
+    prompt = "#{i+1}. "
+    question(prompt, body)
+  elsif i == 13
+    prompt = "#{i}a. "
+    question(prompt, body)
+  else
+    prompt = "#{i}. "
+    question(prompt, body)
+  end
+end
