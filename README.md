@@ -1,6 +1,7 @@
-# Ruby Basics
-## This assignment will walk you through several of the most used ruby types and get your familiar with the ruby syntax
+# Ruby Fundamentals
+## Ruby Basics
 ###### Due Wednesday, February 10, 2016
+This assignment will walk you through several of the most used ruby types and get your familiar with the ruby syntax
 
 ## Objectives
 ###### Learning Objectives
@@ -18,16 +19,16 @@ Link to a GitHub Repo containing the `basics.rb` file
 ###### Requirements
 The file should run without any errors or warnings and should only print `true`
 
-###### Normal Mode
+## Normal Mode
 Only change the left hand side of each expression to make it true.
 
-###### Difficult Mode
+## Difficult Mode
 The way these questions are written reveals a lot of duplication. Add a `question` method that takes two arguments, the prompt for the question, and the body of the question. Use that method to [‘DRY up’](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) the quiz. Requirements from Normal Mode must continue to be met.
 
-###### Epic Mode
+## Epic Mode
 Data structures are awesome. Lets turn our list of questions into a single data structure and print out the answers by looping (or iterating) through them. Make sure each question is labeled with a number automatically. Requirements from Normal Mode must continue to be met.
 
-###### Additional Resource
+## Additional Resource
 `basics.rb` can be found and downloaded from [here](https://gist.github.com/jah2488/1be33c0b78269f97d908)
 
 ###### Tips
